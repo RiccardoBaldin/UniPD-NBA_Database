@@ -1,7 +1,7 @@
 #ifndef FUNZIONI_H
 #define FUNZIONI_H
 
-#include "dependencies/include/libpq-fe.h"
+#include "include/libpq-fe.h"
 #include <stdio.h>
 #include <stdbool.h>
 

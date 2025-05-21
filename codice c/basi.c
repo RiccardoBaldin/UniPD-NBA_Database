@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dependencies/include/libpq-fe.h"
+#include "include/libpq-fe.h"
 #include "funzioni.h"
 
 int main() {

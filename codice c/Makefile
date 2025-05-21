@@ -2,8 +2,8 @@
 CC = gcc
 
 # Directory delle librerie e degli header
-INCLUDES = -Idependencies/include
-LIBS = -Ldependencies/lib -lpq
+INCLUDES = -Iinclude
+LIBS = -Llib -lpq
 
 # Flag di compilazione
 CFLAGS = -Wall -g $(INCLUDES)

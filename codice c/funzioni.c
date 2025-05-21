@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "funzioni.h"
-#include "dependencies/include/libpq-fe.h"
+#include "include/libpq-fe.h"
 
 
 void checkResults(PGresult *res, const PGconn *conn){
