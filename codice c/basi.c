@@ -1,7 +1,7 @@
 #define PG_USER "postgres"
 #define PG_PASS "password"
 #define PG_DB "NBA"
-#define PG_HOST "127.0.0.1"
+#define PG_HOST "localhost"
 #define PG_PORT 5432
 
 #include <stdio.h>
@@ -55,7 +55,7 @@ int main() {
 
     char x;
 while (true) {
-    printf("\n\033[1;33mScegliere una operazione digitandone il numero corrispondente, digitare x per interrompere il programma\033[0m\n\n");
+    printf("\n\033[1;33mScegliere una operazione digitandone il numero corrispondente, digitare [X/x] per interrompere il programma\033[0m\n\n");
     printList();
     
     char input[16];
@@ -86,7 +86,7 @@ while (true) {
         continue;
     }
 
-    if (x == 'x') break;
+    if (x == 'x' || x=='X') break;
 
     int query = x - '0';
     SelezioneQuery(conn, query);

@@ -273,18 +273,8 @@ BEFORE INSERT OR UPDATE ON Contratto
 FOR EACH ROW
 EXECUTE FUNCTION check_contratto_attivo();
 
---------------------------------------------------------------------------------------------------------------------------------------
 
--- IDEE QUERY
-  -- TRA DUE SQUADRE, SCELTE DA UTENTE, RESTITUIRE LA DATA DELLA PARTITA DEGLI ULTIMI VENT'ANNI CON PIU GRANDE 
-    -- DISTACCO DI PUNTI TRA LE DUE E LO STADIO IN CUI E STATA GIOCATA
-
-  -- SELEZIONARE LE n SQUADRE CHE NELL'ANNO SELEZIONATO HANNO COLLEZIONATO PIU TRIPLE-DOPPIE, STAMPARE IL 
-    -- NUMERO DI TRIPLE-DOPPIE E IL GIOCATORE CHE NE HA COLLEZIONATE DI PIU PER OGNI SQUADRA 
-
-
-    
---------------------------------------------------------------------------------------------------------------------------------------
+CREATE INDEX indice_Analisi_Partita ON Analisi_Partita (Data_partita, ID_Membro);
 
 
 INSERT INTO Stadio (Nome_Stadio, Città, Capacità) VALUES
@@ -486,7 +476,7 @@ WITH Giocatori_Con_X_Premi AS (
     SELECT ID_Membro
     FROM Premio
     GROUP BY ID_Membro
-    HAVING COUNT(*) >= 0  -- ⬅️ Sostituisci con il numero scelto dall’utente
+    HAVING COUNT(*) >= 0 
 ),
 
 Giocatori_Squadre AS (
