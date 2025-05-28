@@ -9,7 +9,7 @@ LIBS = -Llib -lpq
 CFLAGS = -Wall -g $(INCLUDES)
 
 # Sorgenti e oggetti
-SRC = basi.c funzioni.c
+SRC = main.c funzioni.c
 OBJ = $(SRC:.c=.o)
 
 # Output
